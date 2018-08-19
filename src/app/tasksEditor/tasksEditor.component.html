@@ -1,0 +1,10 @@
+<div class="main-content">
+hello {{currentId}}
+  <form>
+    <p>ID: {{currentId$}}</p>
+    <p>Name: <input type="text" name="name" id="name" [(ngModel)]="name"></p>
+    Status: {{currentTask$.status ? 'done' : 'to be done'}}
+  </form>
+  <button (click)="backClicked()" >Back</button>
+  <button (click)="updateTask(name)" >Save</button>
+</div>

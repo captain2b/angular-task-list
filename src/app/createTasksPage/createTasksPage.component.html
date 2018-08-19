@@ -1,0 +1,11 @@
+<div class="main-content">
+Create Task
+  <form>
+    <p>ID: <input type="text" name="id" id="id" [(ngModel)]="id"></p>
+    <p>Name: <input type="text" name="name" id="name" [(ngModel)]="name" ></p>
+  </form>
+  <button (click)="backClicked()" >Back</button>
+  <button class="btn btn-success" (click)="createTask(id, name)">
+    Save
+  </button>
+</div>
