@@ -1,0 +1,11 @@
+<div class="main-content">
+  <button  class="button createTaskButton" routerLink='/createTask'> Create New Task</button>
+
+  <ul class="task-list">
+  <app-tasks-list-item
+    *ngFor="let task of (listState$ | async).tasks"
+    [task]="task"
+  >
+  </app-tasks-list-item>
+</ul>
+</div>

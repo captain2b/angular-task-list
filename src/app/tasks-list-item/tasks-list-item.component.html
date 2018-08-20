@@ -1,0 +1,25 @@
+
+<div class="panel">
+  <div class="panel-heading">Task</div>
+  <div class="panel-body">
+    <ul class="task-list">
+      <li>ID: {{task.id}}</li>
+      <li>Name: {{task.name}}</li>
+      <li>Status: {{task.status ? 'done' : 'to be done'}}</li>
+    </ul>
+    <button class="button"
+            (click)="onCompleteTask()"
+            [disabled]="task.status">
+      Done
+    </button>
+    <button class="button"
+            routerLink='/task/{{task.id}}'
+            (click)="onEditTask()">
+      Edit
+    </button>
+    <button class="button"
+            (click)="onDeleteTask()">
+      Delete
+    </button>
+  </div>
+</div>

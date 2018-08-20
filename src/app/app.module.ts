@@ -15,6 +15,8 @@ import {TasksModule} from "./tasks/tasks.module";
 import {TasksListItemComponent} from "./tasks-list-item/tasks-list-item.component";
 import {TasksEditorComponent} from "./tasksEditor/tasksEditor.component";
 import {CreateTasksPageComponent} from "./createTasksPage/createTasksPage.component";
+import {ChartModule} from "angular-highcharts";
+import {StatisticComponent} from "./statistics/statistics.component";
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import {CreateTasksPageComponent} from "./createTasksPage/createTasksPage.compon
     TasksListItemComponent,
     PageNotFoundComponent,
     TasksEditorComponent,
-    CreateTasksPageComponent
+    CreateTasksPageComponent,
+    StatisticComponent
   ],
   imports: [
     AppRoutingModule,
@@ -32,6 +35,7 @@ import {CreateTasksPageComponent} from "./createTasksPage/createTasksPage.compon
     FormsModule,
     BrowserModule,
     HttpClientModule,
+    ChartModule,
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,

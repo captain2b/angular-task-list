@@ -24,7 +24,9 @@
     "@ngrx/entity": "^6.0.0",
     "@ngrx/router-store": "^6.0.0",
     "@ngrx/store": "^6.1.0",
+    "angular-highcharts": "^6.2.6",
     "core-js": "^2.5.4",
+    "highcharts": "^6.1.1",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

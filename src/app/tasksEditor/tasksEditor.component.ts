@@ -39,7 +39,6 @@ export class TasksEditorComponent implements OnInit {
      this.currentId$ = params['id'];
     });
     this.store.dispatch({ type: TasksActionTypes.GetTask, payload: this.currentId$ });
-    this.store.select('task-list').subscribe(data => (this.currentTask$ = data.currentTask; this.name = this.currentTask$.name));
+    let subsc = this.store.select('task-list').subscribe(data => {this.currentTask$ = data.currentTask; this.name = this.currentTask$.name; console.log(data)});
   }
-
 }
