@@ -2,14 +2,15 @@ import {Component, Input, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { TasksActionTypes } from '../store/tasks/tasks.actions';
 import { Location } from '@angular/common';
-import {Observable, Subscription} from 'rxjs/index';
 import { ActivatedRoute } from '@angular/router';
 
 interface AppState {
   tasks: any;
-  currentTask: {id: string;
+  currentTask: {
+    id: string;
   name: string;
-  status: boolean;}
+  status: boolean;
+  }
 }
 
 @Component({
@@ -39,6 +40,6 @@ export class TasksEditorComponent implements OnInit {
      this.currentId$ = params['id'];
     });
     this.store.dispatch({ type: TasksActionTypes.GetTask, payload: this.currentId$ });
-    let subsc = this.store.select('task-list').subscribe(data => {this.currentTask$ = data.currentTask; this.name = this.currentTask$.name; console.log(data)});
+    this.store.select('task-list').subscribe({next: data => {this.currentTask$ = data.currentTask; this.name = this.currentTask$.name; console.log(this.name); }});
   }
 }

@@ -6,6 +6,5 @@ export interface TaskState {
   currentTask?: any;
 }
 export const initialState: TaskState = {
-  tasks: [],
-  currentTask: null
+  tasks: []
 };

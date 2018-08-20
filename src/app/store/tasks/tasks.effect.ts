@@ -4,12 +4,10 @@ import { Action } from '@ngrx/store';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
 import { catchError, map, mergeMap } from 'rxjs/operators';
-import { Router } from '@angular/router';
 import {
-  TasksActionTypes, DeleteTaskSuccess, DeleteTaskError, UpdateTaskError,
-  UpdateTaskSuccess
+  TasksActionTypes
 } from './tasks.actions';
-import {pluck} from "rxjs/internal/operators";
+import {pluck} from 'rxjs/internal/operators';
 
 @Injectable()
 export class ServerEffects {
