@@ -27,6 +27,7 @@ export class TasksEditorComponent implements OnInit {
   currentTask$;
   backClicked() {
     this._location.back();
+    this.store.dispatch({ type: TasksActionTypes.LoadTasks});
   }
   updateTask(name) {
     console.log(name)

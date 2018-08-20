@@ -22,6 +22,7 @@ export class CreateTasksPageComponent implements OnInit {
  }
   backClicked() {
     this._location.back();
+    this.store.dispatch({ type: TasksActionTypes.LoadTasks});
   }
   createTask(id, name){
     const newTask = {id, name, status: false};
