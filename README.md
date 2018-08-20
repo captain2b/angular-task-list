@@ -4,24 +4,42 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+npm run startServer 
+npm run start 
+go to localhost:4200
 
-## Code scaffolding
+##Task
+Введение: 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Приложение по работе с задачами
+Стэк: angular, ngrx(в данном приложении это излишне и используется только для примера), highcharts
 
-## Build
+Возможности приложения: 
+1. Вывод всех текущих задач (с возможностью редактирования и удаления конкретной задачи) 
+2. Добавление задачи 
+3. Вывод статистики по задачам в виде pie чарта - (выполненные и не выполненные задачи)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Для работы с сетью можно воспользоваться json-server (https://github.com/typicode/json-server), который предоставит CRUD операции
 
-## Running unit tests
+Задание 1. 
+1. Создать приложение при помощи angular cli
+2. Добавить первую страницу и заммапить ее на роут /tasks
+3. Подключить ngrx, создать стор 
+4. Получить все задачи с бэка (json-server например), положить в стор, извлечь и вывести список текущих задач - задача содержит (id: number, name: string, status: boolean)
+5. Для каждой задачи добавить кнопки «удалить», «выполнить» и «редактировать».
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Задание 2. 
+1. Добавить возможность удалять задачи
+2. Добавить возможность редактировать задачу - для редактирования следует создать отдельную страницу с роутом /tasks/{id} (для упрощения редактируем только название, добавить две кнопки «назад» и «сохранить») 
+3. Добавить возможность выполнить задачу - переключение флага статус в true
 
-## Running end-to-end tests
+Задание 3. 
+1. На основную страницу добавить кнопку «создать задачу»
+2. При нажатии открывается новая страница, где можно задать id и name - насчёт id не стоит заморачиваться - это не цель задачи
+3. Добавить две кнопки «отмена» и «сохранить»
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Задание 4.
+1. Добавить элемент хедер и в него две ссылки «Задачи» и «Статистика» (“Задачи” ведет на /tasks; “Статистика” ведет на новую страницу /statistic
+2. На страницу Статистики добавить pie chart (highcharts)
+3. Извлечь данные из стора и вывести статистику (процент выполненных и не выполненных задач)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
