@@ -4,9 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-npm run startServer 
-npm run start 
-go to localhost:4200
+1.npm run startServer 
+
+2.npm run start 
+
+3.go to localhost:4200
 
 ##Task
 Введение: 
