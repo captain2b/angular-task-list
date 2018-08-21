@@ -16,9 +16,8 @@ interface AppState {
 @Component({
   selector: 'app-task-editor',
   templateUrl: './tasksEditor.component.html',
-  styleUrls: ['./tasksEditor.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
-})
+  styleUrls: ['./tasksEditor.component.css']})
+
 export class TasksEditorComponent implements OnInit {
   constructor(private route: ActivatedRoute, private store: Store<AppState>, private _location: Location) {
  }
